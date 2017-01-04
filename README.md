@@ -24,7 +24,7 @@ $.getJSON('http://www.example.com/json/provinsi.json', function(response) {
 # kota
 $('#provinsi').on('change', function() {
   var out_kota = '<option value="">Pilih Kota</option>';
-  $.getJSON(base_url+'json/kota/'+$(this).val()+'.json', function(response) {
+  $.getJSON('http://www.example.com/json/kota/'+$(this).val()+'.json', function(response) {
     $.each(response, function(i, e) {
       out_kota += '<option value="'+e.id+'">'+e.name+'</option>';
     });
@@ -37,7 +37,7 @@ $('#provinsi').on('change', function() {
 # kecamatan
 $('#kota').on('change', function() {
   var out_kecamatan = '<option value="">Pilih Kecamatan</option>';
-  $.getJSON(base_url+'json/kecamatan/'+$(this).val()+'.json', function(response) {
+  $.getJSON('http://www.example.com/json/kecamatan/'+$(this).val()+'.json', function(response) {
     $.each(response, function(i, e) {
       out_kecamatan += '<option value="'+e.id+'">'+e.name+'</option>';
     });
@@ -50,7 +50,7 @@ $('#kota').on('change', function() {
 # desa
 $('#kecamatan').on('change', function() {
   var out_desa = '<option value="">Pilih Desa</option>';
-  $.getJSON(base_url+'json/desa/'+$(this).val()+'.json', function(response) {
+  $.getJSON('http://www.example.com/json/desa/'+$(this).val()+'.json', function(response) {
     $.each(response, function(i, e) {
       out_desa += '<option value="'+e.id+'">'+e.name+'</option>';
     });
